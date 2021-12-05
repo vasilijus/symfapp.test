@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Controller;
+// For using annotations 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 use Symfony\Component\HttpFoundation\Response;
 
