@@ -7,6 +7,11 @@ app_lucky_num:
     path: /lucky/number
     controller: App\Controller\LuckyController::number
 
+blog_list:
+    path: /blog
+    # the controller value has the format 'controller_class::method_name'
+    controller: App\Controller\BlogController::list
+
 controllers:
     resource: ../src/Controller/
     type: annotation
