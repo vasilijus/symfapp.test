@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller    ;
+namespace App\Controller;
 
 // For using annotations 
 // use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
