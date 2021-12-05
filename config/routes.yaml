@@ -1,3 +1,11 @@
+# index:
+#     path: /
+#     controller: App\Controller\ArticleController:index
+    
+app_lucky_num:
+    path: /lucky/number
+    controller: App\Controller\LuckyController::number
+        
 controllers:
     resource: ../src/Controller/
     type: annotation
