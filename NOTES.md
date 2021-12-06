@@ -13,3 +13,5 @@ $ symfony book:check-requirements
 ```
 symfony composer
 ```
+
+ symfony new guestbook --version=5.0
