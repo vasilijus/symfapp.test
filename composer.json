@@ -1,30 +1,19 @@
 {
-    "name": "symfony/skeleton",
     "type": "project",
-    "license": "MIT",
-    "description": "A minimal Symfony project recommended to create bare bones applications",
-    "minimum-stability": "stable",
-    "prefer-stable": true,
+    "license": "proprietary",
     "require": {
-        "php": ">=8.0.2",
+        "php": "^7.2.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "doctrine/annotations": "^1.13",
-        "sensio/framework-extra-bundle": "^6.2",
-        "symfony/console": "6.0.*",
-        "symfony/dotenv": "6.0.*",
-        "symfony/expression-language": "6.0.*",
-        "symfony/flex": "^2",
-        "symfony/framework-bundle": "6.0.*",
-        "symfony/monolog-bundle": "^3.7",
-        "symfony/runtime": "6.0.*",
-        "symfony/twig-bundle": "6.0.*",
-        "symfony/yaml": "6.0.*",
-        "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0"
+        "symfony/console": "5.0.*",
+        "symfony/dotenv": "5.0.*",
+        "symfony/flex": "^1.3.1",
+        "symfony/framework-bundle": "5.0.*",
+        "symfony/yaml": "5.0.*"
+    },
+    "require-dev": {
     },
     "config": {
-        "optimize-autoloader": true,
         "preferred-install": {
             "*": "dist"
         },
@@ -41,12 +30,13 @@
         }
     },
     "replace": {
+        "paragonie/random_compat": "2.*",
         "symfony/polyfill-ctype": "*",
         "symfony/polyfill-iconv": "*",
         "symfony/polyfill-php72": "*",
-        "symfony/polyfill-php73": "*",
-        "symfony/polyfill-php74": "*",
-        "symfony/polyfill-php80": "*"
+        "symfony/polyfill-php71": "*",
+        "symfony/polyfill-php70": "*",
+        "symfony/polyfill-php56": "*"
     },
     "scripts": {
         "auto-scripts": {
@@ -66,7 +56,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "6.0.*"
+            "require": "5.0.*"
         }
     }
 }
