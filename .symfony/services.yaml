@@ -1,4 +1,9 @@
 
+# database:
+#     type: postgresql:13
+#     disk: 1024
+# https://symfony.com/doc/current/cloud/services/mysql.html
+
 database:
-    type: postgresql:13
+    type: oracle-mysql:8.0
     disk: 1024
