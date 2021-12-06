@@ -40,3 +40,6 @@ This command creates a few files needed by SymfonyCloud, namely
 ---
 
 symfony composer req profiler --dev 
+
+symfony console list make
+
