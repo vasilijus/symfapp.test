@@ -43,3 +43,15 @@ symfony composer req profiler --dev
 
 symfony console list make
 
+## Entity & Migrations
+
+symfony console make:entity Conference
+
+
+php bin/console make:migration
+
+  Success! 
+        
+Next: Review the new migration "migrations/Version20211206212755.php"
+Then: Run the migration with php bin/console doctrine:migrations:migrate
+---
