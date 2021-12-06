@@ -29,3 +29,10 @@ git branch -u origin/mast mast
 git remote set-head origin -a
 ```
 ---
+
+
+```
+symfony project:init
+```
+This command creates a few files needed by SymfonyCloud, namely
+.symfony/services.yaml, .symfony/routes.yaml, and .symfony.cloud.yaml.
