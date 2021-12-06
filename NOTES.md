@@ -1,4 +1,4 @@
-#
+# Notes
 
 ## Sym CLI
 
@@ -14,4 +14,18 @@ $ symfony book:check-requirements
 symfony composer
 ```
 
- symfony new guestbook --version=5.0
+symfony new guestbook --version=5.0
+
+---
+### Git Branching
+The default branch has been renamed!
+master is now named mast
+
+If you have a local clone, you can update it by running the following commands.
+```
+git branch -m master mast
+git fetch origin
+git branch -u origin/mast mast
+git remote set-head origin -a
+```
+---
