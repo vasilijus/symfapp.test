@@ -36,3 +36,7 @@ symfony project:init
 ```
 This command creates a few files needed by SymfonyCloud, namely
 .symfony/services.yaml, .symfony/routes.yaml, and .symfony.cloud.yaml.
+
+---
+
+symfony composer req profiler --dev 
