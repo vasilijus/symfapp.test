@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Post;
+use App\Form\CreatePostType;
 use App\Repository\PostRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Doctrine\Persistence\ManagerRegistry;
@@ -27,9 +28,24 @@ class PostController extends AbstractController
     #[Route('/create', name: 'create')]
     public function create(Request $request, ManagerRegistry $doctrine)
     {
-        
+        $post = new Post();
+
+        $form = $this->createForm(CreatePostType::class, $post);
+
+        $form->handleRequest($request);
+
+        // $form->getErrors(); // requires Validation
+
+        if($form->isSubmitted() && $form->isValid()) {
+            $em = $doctrine->getManager();
+            $em->persist($post);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('app_post.index'));
+        }
+
         return $this->render('post/create.html.twig', [
-            'name' => 'master'
+            'form' => $form->createView()
         ]);
     
     }

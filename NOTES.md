@@ -66,8 +66,69 @@ Next: When you're ready, create a migration with php bin/console make:migration
  https://symfony.com/doc/current/doctrine.html#creating-an-entity-class
  php bin/console dbal:run-sql 'SELECT * FROM product'
 
- 
----                      
+
+
+### To use forms 
+ composer require form validator
+
+ php bin/console make:form
+
+
+### User Entiti
+
+ ~/c/H/symfapp.test  develop ⇡5 *1 !4 ?3  php bin/console make:user
+
+
+
+created: src/Entity/User.php
+ created: src/Repository/UserRepository.php
+ updated: src/Entity/User.php
+ updated: config/packages/security.yaml
+
+           
+  Success! 
+           
+
+ Next Steps:
+   - Review your new App\Entity\User class.
+   - Use make:entity to add more fields to your User entity and then run make:migration.
+   - Create a way to authenticate! See https://symfony.com/doc/current/security.html
+
+
+### Authentication
+ php bin/console make:auth
+❯ php bin/console make:auth
+
+ What style of authentication do you want? [Empty authenticator]:
+  [0] Empty authenticator
+  [1] Login form authenticator
+ > 1
+
+ The class name of the authenticator to create (e.g. AppCustomAuthenticator):
+ > CustomAuthenticator 
+
+ Choose a name for the controller class (e.g. SecurityController) [SecurityController]:
+ > 
+
+ Do you want to generate a '/logout' URL? (yes/no) [yes]:
+ > 
+
+ created: src/Security/CustomAuthenticator.php
+ updated: config/packages/security.yaml
+ created: src/Controller/SecurityController.php
+ created: templates/security/login.html.twig
+
+           
+  Success! 
+           
+
+ Next:
+ - Customize your new authenticator.
+ - Finish the redirect "TODO" in the App\Security\CustomAuthenticator::onAuthenticationSuccess() method.
+ - Review & adapt the login template: templates/security/login.html.twig. 
+
+
+
  ### Degug Routes 
 php bin/console debug:route
 
