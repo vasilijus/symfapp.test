@@ -53,6 +53,25 @@ symfony console make:entity Conference
 Next: When you're ready, create a migration with php bin/console make:migration
 
   Success! 
+
+### Force Schema update
+➜  symfapp.test git:(develop) php bin/console doctrine:schema:update --force   
+
+ Updating database schema...
+
+     1 query was executed
+
+ [OK] Database schema updated successfully!                                                     
+ ### Query Db - setup Persistence 
+ https://symfony.com/doc/current/doctrine.html#creating-an-entity-class
+ php bin/console dbal:run-sql 'SELECT * FROM product'
+
+ 
+---                      
+ ### Degug Routes 
+php bin/console debug:route
+
+                                             
         
 Next: Review the new migration "migrations/Version20211206212755.php"
 Then: Run the migration with php bin/console doctrine:migrations:migrate
