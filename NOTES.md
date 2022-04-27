@@ -50,8 +50,7 @@ php bin/console doctrine:database:create
 
 symfony console make:entity Conference
 
-
-php bin/console make:migration
+Next: When you're ready, create a migration with php bin/console make:migration
 
   Success! 
         
