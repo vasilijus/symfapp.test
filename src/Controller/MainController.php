@@ -27,10 +27,10 @@ class MainController extends AbstractController
     {
         return new Response('main 2');
     }
-    #[Route('/main-3/{name?}', name: 'main2')]
+    #[Route('/main-name3/{name?}', name: 'main2')]
     public function main3( Request $request )
     {
-        // dump($request);
-        return $request;
+        $test =$request->get('name');
+        return new Response("<h1>Welcome $test.</h1>");
     }
 }
