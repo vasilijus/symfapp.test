@@ -27,10 +27,16 @@ class MainController extends AbstractController
     {
         return new Response('main 2');
     }
-    #[Route('/main-name3/{name?}', name: 'main2')]
+    #[Route('/main-name3/{name?}', name: 'main3')]
     public function main3( Request $request )
     {
-        $test =$request->get('name');
-        return new Response("<h1>Welcome $test.</h1>");
+        $greet = '';
+        if ( $test =$request->get('name') ) {
+            $greet = $test;
+        }
+        // return new Response("<h1>Welcome $test.</h1>");
+        return $this->render('main/index3.html.twig', [
+            'pass_data' => $greet
+        ]);
     }
 }

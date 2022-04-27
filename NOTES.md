@@ -43,6 +43,9 @@ symfony composer req profiler --dev
 
 symfony console list make
 
+## Create database 
+php bin/console doctrine:database:create
+
 ## Entity & Migrations
 
 symfony console make:entity Conference
