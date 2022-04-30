@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class RegistrationController extends AbstractController
 {
     #[Route('/register', name: 'app_registration')]
-    public function register(Request $request, UserPasswordHasherInterface $pe ,ManagerRegistry $doctrine): Response
+    public function register(Request $request, UserPasswordHasherInterface $passwordHasher ,ManagerRegistry $doctrine): Response
     {
         $form = $this->createFormBuilder()
                 ->add('username')
@@ -38,7 +38,7 @@ class RegistrationController extends AbstractController
             $user = new User();
             $user->setUsername('admin');
             $user->setPassword(
-                $pe->hashPassword($user, $data['password'] )
+                $passwordHasher->hashPassword($user, $data['password'] )
             );
 
             // dump($data);
